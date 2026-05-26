@@ -23,7 +23,17 @@ class="center">
 ## Qualitative Results
 
 <p align="center">
-<img src="figs/visulization.jpg" width=80% height=80% 
+<img src="figs/limits.jpg" width=80% height=80% 
+class="center">
+</p>
+
+<p align="center">
+<img src="figs/visulization_synapse.jpg" width=80% height=80% 
+class="center">
+</p>
+
+<p align="center">
+<img src="figs/visulization_isic18.jpg" width=80% height=80% 
 class="center">
 </p>
 
