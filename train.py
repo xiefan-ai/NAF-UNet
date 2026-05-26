@@ -57,9 +57,15 @@ if __name__ == "__main__":
     dataset_name = args.dataset
     dataset_config = {
         'Synapse': {
-            'root_path': r'C:\dataset\Synapse\train_npz', # change to your Synapse data path
+            'root_path': './Synapse/train_npz', # change to your Synapse data path
             'list_dir': './lists/lists_Synapse',
             'num_classes': 9,
+        },
+        'ACDC': {
+            # 'Dataset': ACDC_dataset,  # datasets.dataset_acdc.BaseDataSets,
+            'root_path': './data/ACDC',
+            'list_dir': None,
+            'num_classes': 4,
         },
     }
     args.num_classes = dataset_config[dataset_name]['num_classes']

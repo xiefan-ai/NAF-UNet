@@ -13,6 +13,7 @@ from datasets.dataset_synapse import Synapse_dataset
 from network.config.configuration_unet import NAFUNetConfig
 from network.naf_unet import NAFUNetModel
 from utils import test_single_volume
+from datasets.dataset_acdc import BaseDataSets as ACDC_dataset
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--volume_path', type=str,
@@ -79,6 +80,14 @@ if __name__ == "__main__":
             'list_dir': './lists/lists_Synapse',
             'num_classes': 9,
             'z_spacing': 1,
+        },
+        'ACDC': {
+            'Dataset': ACDC_dataset,  # datasets.dataset_acdc.BaseDataSets,
+            'volume_path': r'G:\dataset\ACDC_preprocessed',
+            'list_dir': None,
+            'num_classes': 4,
+            'z_spacing': 5,
+            'info': '3D'
         },
     }
     dataset_name = args.dataset
