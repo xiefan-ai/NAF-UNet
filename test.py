@@ -23,12 +23,12 @@ parser.add_argument('--num_classes', type=int,
                     default=4, help='output channel of network')
 parser.add_argument('--list_dir', type=str,
                     default='./lists/lists_Synapse', help='list dir')
-
-
+parser.add_argument('--max_epochs', type=int, default=5, help='maximum epoch number to train')
+parser.add_argument('--batch_size', type=int, default=2,
+                    help='batch_size per gpu')
 parser.add_argument('--img_size', type=int, default=224, help='input patch size of network input')
 parser.add_argument('--is_savenii', action="store_true", help='whether to save results during inference')
-
-
+parser.add_argument('--base_lr', type=float,  default=3e-4, help='segmentation network learning rate')
 parser.add_argument('--test_save_dir', type=str, default=None, help='saving prediction as nii!')
 parser.add_argument('--deterministic', type=int,  default=1, help='whether use deterministic training')
 parser.add_argument('--seed', type=int, default=1234, help='random seed')
@@ -75,7 +75,7 @@ if __name__ == "__main__":
     dataset_config = {
         'Synapse': {
             'Dataset': Synapse_dataset,
-            'volume_path': '../data/Synapse/test_vol_h5',
+            'volume_path': r'/home/xiefan/data/medical/Synapse/test_vol_h5',
             'list_dir': './lists/lists_Synapse',
             'num_classes': 9,
             'z_spacing': 1,

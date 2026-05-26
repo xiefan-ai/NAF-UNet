@@ -1,3 +1,6 @@
+from typing import Optional, List
+
+
 class NAFUNetConfig:
     """
     NAFUNet 模型配置类
@@ -7,8 +10,8 @@ class NAFUNetConfig:
         self,
         num_classes: int = 1,
         in_channels: int = 1,
-        encoder_channels: list | None = None,
-        decoder_channels: list | None = None,
+            encoder_channels: Optional[List[int]] = None,
+            decoder_channels: Optional[List[int]] = None,
         ignore_background: bool = False,
         **kwargs
     ):
