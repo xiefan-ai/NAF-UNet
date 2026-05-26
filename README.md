@@ -37,7 +37,7 @@ The directory structure of the whole project is as follows:
 
 ```
 .
-├── RWKVUNet
+├── NAF-UNet
 │   ├──datasets
 │   │       └── dataset_*.py
 │   ├──train.py
