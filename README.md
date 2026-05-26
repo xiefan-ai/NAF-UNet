@@ -84,11 +84,10 @@ python train.py --dataset Synapse --max_epochs 300 --img_size 224
 python test.py --dataset Synapse --max_epochs 300 --img_size 224
 ```
 
-```
+
 ## Acknowledgements
 This code base uses certain code blocks and helper functions from [TransUNet](https://github.com/Beckschen/TransUNet/tree/main).
 
 ## Citations
 
-``` 
 
